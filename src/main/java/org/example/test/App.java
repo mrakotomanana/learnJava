@@ -1,26 +1,28 @@
 package org.example.test;
 
 
-
-import org.apache.http.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicHeader;
-import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args ) throws IOException {
+public class App {
+    public String login;
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public static void main(String[] args) throws IOException {
 
 //        //Creating a HttpClient object
 //        CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -98,6 +100,7 @@ public class App
         public static void main(String args){System.out.println("main with String");}
         public static void main(){System.out.println("main without args");}
     */
+
 }
 
 class MyResponseHandler implements ResponseHandler<String> {
